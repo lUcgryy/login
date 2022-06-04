@@ -1,0 +1,8 @@
+<%-include('header')-%>
+
+<div class="text-center center-div mt-5" id = "login">
+    <h2>My admin page</h2>
+    <h3><%=locals.user ? user: "User"%></h3>
+    <a href="/logout">Logout</a>
+</div>
+<%-include('footer')-%>
