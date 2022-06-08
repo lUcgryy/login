@@ -42,4 +42,17 @@ router.get('/logout', (req, res) => {
         }
     });
 });
+
+//secret pages that no one has access to (muahahaha)
+router.get('/secret', (req, res) => {
+    if (req.session.user) {
+        res.render('secret', {
+            title: 'My Idols Collection 🤩🤩',
+            user: req.session.user
+        });
+    } else {
+        res.send("You are not Lucgr");
+    }
+});
+
 module.exports = router;
